@@ -1,8 +1,9 @@
 stages:
 - name: cat
   steps:
-  - runScriptConfig:
-      image: golang:latest
-      shellScript: cat test && echo hello
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: pipeline-test
 timeout: 60
 notification: {}
