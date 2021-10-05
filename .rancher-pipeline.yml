@@ -12,7 +12,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: pipeline-test
+      tag: cmurpheus/pipeline-test
       pushRemote: true
       registry: index.docker.io
 timeout: 60
