@@ -7,13 +7,5 @@ stages:
       tag: pipeline-test
     env:
       PLUGIN_STORAGE_PATH: /var/lib/docker/1
-- name: publishreal
-  steps:
-  - publishImageConfig:
-      dockerfilePath: ./Dockerfile
-      buildContext: .
-      tag: pipeline-test
-      pushRemote: true
-      registry: index.docker.io
 timeout: 60
 notification: {}
