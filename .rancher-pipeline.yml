@@ -1,2 +1,10 @@
+stages:
+- name: publish
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: pipeline-test
+      registry: index.docker.io
 timeout: 60
 notification: {}
