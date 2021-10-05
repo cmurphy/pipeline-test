@@ -1,11 +1,2 @@
-stages:
-- name: publish
-  steps:
-  - publishImageConfig:
-      dockerfilePath: ./Dockerfile
-      buildContext: .
-      tag: pipeline-test
-    env:
-      PLUGIN_STORAGE_PATH: /var/lib/docker/1
 timeout: 60
 notification: {}
